@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+/* #2c2158 aliceblue*/
+:root {
+  --color1: #2c2158;
+  --color2: rgb(195, 206, 215);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color1);
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--color1);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color2);
+  border-radius: 0.6rem;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 550px;
+  width: 90%;
+  background: var(--color2);
+  border-radius: 5px;
+  padding: 30px;
+}
+.wrapper .text-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.wrapper .text-box textarea {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  overflow-y: scroll;
+  resize: none;
+  padding: 30px;
+  font-size: 1rem;
+  text-align: justify;
+}
+textarea::placeholder {
+  font-size: 1.12rem;
+}
+#text:focus {
+  border: none;
+}
+.heading {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: var(--color1);
+}
+.wrapper .count-display {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: var(--color1);
+}
+.row {
+  text-align: center;
+}
+.count {
+  font-size: 2rem;
+}
