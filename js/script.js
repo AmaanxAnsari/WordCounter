@@ -28,3 +28,13 @@ textarea.addEventListener('input', function () {
     document.getElementById('special').innerHTML = specialCount
 
 })
+
+
+
+
+// let str ="AEIOU BCDFH"
+// let regexVowels = /[aeiou]/gi
+// let regexConsonents = /[^aeiou\s]/gi
+
+// console.log(`Number of Vowels are ${str.match(regexVowels).length}`)
+// console.log(`Number of Consonents are ${str.match(regexConsonents).length}`)
