@@ -22,10 +22,10 @@ textarea.addEventListener('input', function () {
     document.getElementById('space').innerHTML = space
 
     // To count Special Characters
-    let special = this.value
-    let regex = /[^\w\s]/g;
-    let specialCount = (special.match(regex) || []).length
-    document.getElementById('special').innerHTML = specialCount
+    // let special = this.value
+    // let regex = /[^\w\s]/g;
+    // let specialCount = (special.match(regex) || []).length
+    // document.getElementById('special').innerHTML = specialCount
 
 })
 
