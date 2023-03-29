@@ -16,11 +16,13 @@ textarea.addEventListener('input', function () {
 
 
     // To count Spaces
-    let space = txt.split(" ")
-    let spaceArray = space.filter(function (e) {
-        return e == ""
-    })
-    document.getElementById('space').innerHTML = spaceArray.length
+    let space = txt.split(" ").length - 1
+    document.getElementById('space').innerHTML = space
 
     // To count Special Characters
+    let special = this.value
+    let regex = /[^\w\s|_]/g;
+    let specialCount = (special.match(regex) || []).length
+    document.getElementById('special').innerHTML = specialCount
+
 })
