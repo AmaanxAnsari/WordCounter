@@ -4,7 +4,9 @@ textarea.addEventListener('input', function () {
 
     // To count Letters
     let txt = this.value
-    document.getElementById('letter').innerHTML = txt.length
+    let exp = /[a-zA-Z0-9]/g
+    let letterCount = (txt.match(exp) || []).length
+    document.getElementById('letter').innerHTML = letterCount
 
     // To count Words
     let word = txt.trim().split(/\s+/)
@@ -21,7 +23,7 @@ textarea.addEventListener('input', function () {
 
     // To count Special Characters
     let special = this.value
-    let regex = /[^\w\s|_]/g;
+    let regex = /[^\w\s]/g;
     let specialCount = (special.match(regex) || []).length
     document.getElementById('special').innerHTML = specialCount
 
