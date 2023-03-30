@@ -4,22 +4,38 @@ textarea.addEventListener('input', function () {
 
     // To count Letters
     let txt = this.value
-    let exp = /[a-zA-Z0-9]/g
+    let exp = /[\w]/g
     let letterCount = (txt.match(exp) || []).length
     document.getElementById('letter').innerHTML = letterCount
 
+    //To count Vowels
+    let vow = this.value
+    let regexVowels = /[aeiou]/gi
+    let vowelsCount = (vow.match(regexVowels) || []).length
+    document.getElementById('vowels').innerHTML = vowelsCount
+
+    //To count Consonents
+    let con = this.value
+    let regexConsonents = /[^aeiou?!@#$%^&*0-9(){}['":;/<,>`=+_.-\s]/gi
+    let consonentsCount = (con.match(regexConsonents) || []).length
+    document.getElementById('consonents').innerHTML = consonentsCount
+
     // To count Words
-    let word = txt.trim().split(/\s+/)
+    let word = this.value.trim().split(/\s+/)
     let wordArray = word.filter(function (e) {
         return e != "";
     })
     document.getElementById('word').innerHTML = wordArray.length
 
-
-
     // To count Spaces
     let space = txt.split(" ").length - 1
     document.getElementById('space').innerHTML = space
+
+    //To count Numbers
+    let num = this.value
+    let regexNumber = /[\d]/g
+    let numberCount = (num.match(regexNumber) || []).length
+    document.getElementById('number').innerHTML = numberCount
 
     // To count Special Characters
     let special = this.value
@@ -28,13 +44,3 @@ textarea.addEventListener('input', function () {
     document.getElementById('special').innerHTML = specialCount
 
 })
-
-
-
-
-// let str ="AEIOU BCDFH"
-// let regexVowels = /[aeiou]/gi
-// let regexConsonents = /[^aeiou\s]/gi
-
-// console.log(`Number of Vowels are ${str.match(regexVowels).length}`)
-// console.log(`Number of Consonents are ${str.match(regexConsonents).length}`)
