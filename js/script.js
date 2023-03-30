@@ -4,7 +4,7 @@ textarea.addEventListener('input', function () {
 
     // To count Letters
     let txt = this.value
-    let exp = /[\w]/g
+    let exp = /[a-z]/g
     let letterCount = (txt.match(exp) || []).length
     document.getElementById('letter').innerHTML = letterCount
 
